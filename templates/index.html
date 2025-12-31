@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Transformer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Image Transformer</h2>
+    
+    <form id="imageForm" enctype="multipart/form-data"> 
+        <label class="upload-box" for="imgUpload">
+            Click here to Upload Image
+        </label>
+        <input type="file" id="imgUpload" accept="image/*">
+
+
+        <select id="transformSelect">
+            <option value="">Select Transformation</option>
+            <option value="Translation">Translation (tx, ty)</option>
+            <option value="Rotating">Rotating (Angle)</option>
+            <option value="Negative">Negative</option>
+            <option value="Scaling">Scaling (sx, sy)</option>
+            <option value="Contrast of image">Contrast (Level)</option>
+            <option value="Image Sharpening">Sharpening (Strength)</option>
+        </select>
+        
+        <button type="button" id="applyBtn">Apply Transformation</button>
+    </form>
+    
+    <button class="downloadBtn">Download Image</button>
+
+    <div class="preview">
+        <h3>Preview:</h3>
+        <img id="previewImage" src="" alt="Processed Image Preview">
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
